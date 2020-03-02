@@ -1,0 +1,79 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Davivienda S.A.</title>
+</head>
+
+<body>
+  <section class="container">
+    <!-- Botón "atrás" Mobile -->
+    <a href="javascript:void(0)" class="backButton">
+      <span class="icon-dv-btnBack"></span>
+      Atrás
+    </a>
+    <!-- Fin Botón "atrás" Mobile -->
+    
+    <!-- Tracking alterno - clase: dataNav__step--complete -->
+    <div class="trackingMain">
+      <div class="trackingMain__dataNav">
+        <!-- No se necesita poner números en el tracking, van automaticos por CSS -->
+        <a href="javascript:void(0)" class="dataNav__step dataNav__step--complete"></a>
+        <a href="javascript:void(0)" class="dataNav__step dataNav__step--complete"></a>
+        <a href="javascript:void(0)" class="dataNav__step dataNav__step--complete"></a>
+      </div>
+    </div>
+    <!-- Confirmaciones -->
+    <div class="contentBox contentBox--fullWidth">
+      <h1 class="center noMrgnTop"> <strong> Marque las siguientes opciones para continuar con el proceso:</strong> </h1>
+      <form id="formTermsConditions">
+        <div class="input">
+            <label class="checkbox" for="rules">
+                Acepto que conozco y estoy de acuerdo con el <a href="javascript:void(0)">reglamento del producto</a>.
+                <input type="checkbox" name="termsConditions" id="rules">
+                <div class="checkbox__indicator"></div>
+            </label>
+        </div>
+
+        <div class="input">
+            <label class="checkbox">
+                Autorizo a Davivienda a <strong>debitar automáticamente </strong>el valor del aporte mensual del producto seleccionado.
+                <input type="checkbox" name="termsConditions" id="contributions">
+                <div class="checkbox__indicator"></div>
+            </label>
+        </div>
+
+        <div class="input">
+            <label class="checkbox">
+                Acepto que conozco y estoy de acuerdo con los <a href="javascript:void(0)">términos y condiciones </a>de la inversión y la recomendación profesional entregada en esta experiencia.
+                <input type="checkbox" name="termsConditions" id="conditions"  onclick="checkConditions()">
+                <div class="checkbox__indicator"></div>
+            </label>
+        </div>
+        <div class="input">
+            <label>Este es el correo al que le enviaremos los documentos de su inversión.</label>
+            <input type="email" placeholder="*****@*****">
+        </div>
+      </form>
+    </div>
+    <!-- Fin container Confirmaciones -->
+
+    <!-- Contenedor y Botones genericos - Siempre poner los botones dentro de contButtons -->
+    <div class="contButtons">
+      <button type="button" class="button button--secondary button--back">Regresar</button>
+      <button type="button" class="button button--secondary" id="validateTermsConditions">Continuar</button>
+    </div>
+    <!-- Contenedor y Botones genericos -->
+
+  </section>
+
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Estilos por default RangeSlider.css -->
+  <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+  <title>Davivienda S.A.</title>
+</head>
+
+<body>
+  <section class="container">
+    <!-- Botón "atrás" Mobile -->
+    <a href="javascript:void(0)" class="backButton">
+      <span class="icon-dv-btnBack"></span>
+      Atrás
+    </a>
+    <!-- Fin Botón "atrás" Mobile -->
+
+    <!-- Formularios -->
+    <!-- Fin Botón "atrás" Mobile -->
+
+    <!-- Formularios -->
+    
+    <!--Cambio 4 IMPORTANTE
+    
+      Se agrega la clase contentBox--fullWidth
+      Esto aumentar el tamaño de la caja contenedora.
+      con el fin de ampliar el espacio y asi evitar que la informacion se vea muy junta.
+    -->
+    <div class="contentBox contentBox--maxWidth contentBox--fullWidth " id="contBox">
+      <div class="containerObj">
+        <h2 class="regular noMrgnTop">Seleccione el objetivo que desea alcanzar con
+          su inversión:</h2>
+        <form id="myForm">
+          <!-- ----Fila 1---- -->
+          <div class="row">
+            <label for="viviendaChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio">
+                        <input type="radio" value="" name="objetivo" id="viviendaChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-vivienda">
+                    <label for="viviendaChecked">
+                      <h2 class="small"><strong>Vivienda</strong></h2>
+                      <div id="select-living">
+                        <p class="item-seleccionado" id="compra-vivienda">Compra</p>
+                        <p class="item-seleccionado" id="remodelacion-vivienda">Remodelación</p>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-vivienda.svg" alt="" id="vivienda-icono"
+                      class="iconObjInv iconObjInv--filterGra ">
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label for="jubilacionChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="jubilacionChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-jubilacion">
+                    <label for="jubilacionChecked">
+                      <h2 class="small"><strong>Jubilación</strong></h2>
+                      <p class="item-seleccionado" id="opcion-jubilacion">Jubilación</p>
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-jubilacion.svg" alt="" id="jubilacion-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class="row--Content vivienda" id="collapseVivienda">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Compra
+                <input type="radio" value="compra" name="inversion" id="compra">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Remodelación
+                <input type="radio" value="remodelacion" name="inversion" id="remodelacion">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <div class="row--Content jubilacion" id="collapseJubilacion">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Jubilación
+                <input type="radio" value="jubilacion" name="inversion" id="jubilacion">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <!-- ----Fila 2---- -->
+          <div class="row">
+            <label for="movilidadChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="movilidadChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-movilidad">
+                    <label for="movilidadChecked">
+                      <h2 class="small"><strong>Movilidad</strong></h2>
+                      <div id="select-movility">
+                        <p class="item-seleccionado" id="carro-movilidad">Carro</p>
+                        <p class="item-seleccionado" id="motocicleta-movilidad">Motocicleta</p>
+                        <p class="item-seleccionado" id="bicicleta-movilidad">Bicicleta</p>
+                        <p class="item-seleccionado" id="patineta-movilidad">Patineta</p>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-movilidad.svg" alt="" id="movilidad-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label for="viajeChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="viajeChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-viaje">
+                    <label for="viajeChecked">
+                      <h2 class="small"><strong>Viaje</strong></h2>
+                      <div id="select-travels">
+                        <p class="item-seleccionado" id="vacaciones-viaje">Vacaciones</p>
+                        <p class="item-seleccionado" id="sabatico-viaje">Sabático</p>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-viaje.svg" alt="" id="viaje-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class="row--Content movilidad" id="collapseMovilidad">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Carro
+                <input type="radio" value="carro" name="inversion" id="carro">
+                <div class="radio__indicator radio__indicator--small "></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Motocicleta
+                <input type="radio" value="motocicleta" name="inversion" id="motocicleta">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Bicicleta
+                <input type="radio" value="bicicleta" name="inversion" id="bicicleta">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Patineta
+                <input type="radio" value="patineta" name="inversion" id="patineta">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <div class="row--Content viaje" id="collapseViaje">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Vacaciones
+                <input type="radio" value="vacaciones" name="inversion" id="vacaciones">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Sabático
+                <input type="radio" value="sabatico" name="inversion" id="sabatico">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <!-- ----Fila 3---- -->
+          <div class="row">
+            <label for="educacionChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="educacionChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-educacion">
+                    <label for="educacionChecked">
+
+                      <!--Cambio 2
+
+                          Se agrega el id="title-edu"
+                          Se creo este ide para centralizar y mejorar la visualizacion de los textos
+                        -->
+
+                      <h2 class="small" id="title-edu"><strong>Educación</strong></h2>
+                      <div id="select-education">
+                        <p class="item-seleccionado wrapperEllipsis" id="bono-educacion">Bono Escolar</p>
+                        <p class="item-seleccionado wrapperEllipsis" id="universidad-educacion">Universidad</p>
+
+                        <!--Cambio 3
+                          
+                          Se agrega la etiqueta <br>
+                          Se agrega este salto de linea para visualizar de manera correcta el texto
+                        -->
+
+                        <p class="item-seleccionado wrapperEllipsis" id="superior-educacion">Estudios <br> Superiores</p>
+                      </div>
+
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-educacion.svg" alt="" id="educacion-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label for="familiaChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="familiaChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-familia">
+                    <label for="familiaChecked">
+                      <h2 class="small" id="hiddenFamilia"><strong>Familia</strong></h2>
+                      <div id="select-familia">
+                        <p class="item-seleccionado wrapperEllipsis" id="celebraciones-familia">Celebraciones</p>
+                        <p class="item-seleccionado wrapperEllipsis" id="hijos-familia">Hijos</p>
+
+                        <!--Cambio 1
+
+                            Se agrega la etiqueta <br> en el texto para ajustar los requerimientos de diseño-->
+
+                        <p class="item-seleccionado wrapperEllipsis" id="sostenimiento-familia"> Sostenimiento <br> de Padres
+                          Ancianos</p>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-familia.svg" alt="" id="familia-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class="row--Content educacion" id="collapseEducacion">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Bono Escolar
+                <input type="radio" value="compra" name="inversion" id="bono-escolar">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Estudios Superiores
+                <input type="radio" value="remodelacion" name="inversion" id="estudios-superiores">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Universidad
+                <input type="radio" value="remodelacion" name="inversion" id="universidad">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <div class="row--Content familia" id="collapseFamilia">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Celebraciones
+                <input type="radio" value="" name="inversion" id="celebraciones">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Hijos
+                <input type="radio" value="" name="inversion" id="hijos">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Sostenimiento de Padres Ancianos
+                <input type="radio" value="" name="inversion" id="sostenimiento">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <!-- ----Fila 4---- -->
+          <div class="row" id="rowFour">
+            <label for="capitalChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="capitalChecked">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-capital">
+                    <label for="capitalChecked">
+                      <h2 class="small" id="hiddenCapital"><strong>Incrementar mi Capital</strong></h2>
+                      <div id="select-capital">
+                        <p class="item-seleccionado" id="patriminio-capital">Aumentar mi Patrimonio</p>
+                        <!--Se agrega la clase - class="item-seleccionado wrapperEllipsis" 
+                            Se agregó la clase para visualizar de forma correcta el texto.-->
+                        <p class="item-seleccionado wrapperEllipsis" id="emprendimiento-capital">Emprendimiento</p>
+                      </div>
+
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-capital.svg" alt="" id="capital-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label for="otrosChecked">
+              <div class="col">
+                <div class="content">
+                  <!-- Contenedor de radio -->
+                  <div class="contentRadio">
+                    <div class="input">
+                      <label class="radio topObj">
+                        <input type="radio" value="" name="objetivo" id="otrosChecked" oninput="otherOption()">
+                        <div class="radio__indicator radio__indicator--small"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Contenedor de titulo -->
+                  <div class="contentTitle" id="col-otros">
+                    <label for="otrosChecked">
+                      <h2 class="small"><strong>Otros</strong></h2>
+                      <p class="item-seleccionado" id="valorOtros"></p>
+                    </label>
+                  </div>
+                  <!-- Contenedor de icono -->
+                  <div class="contentIcon">
+                    <img src="../images/icon-otros.svg" alt="" id="otros-icono"
+                      class="iconObjInv iconObjInv--filterGray">
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+          <div class="row--Content capital" id="collapseCapital">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Aumentar mi Patrimonio
+                <input type="radio" value="patrimonio" name="inversion" id="patrimonio">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+            <div class="input input--margin-boton-min">
+              <label class="radio selectCheck">
+                Emprendimiento
+                <input type="radio" value="emprendimiento" name="inversion" id="emprendimiento">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+          <div class="row--Content otros" id="collapseOtros">
+            <div class="row--Content__background"></div>
+            <div class="input input--margin-boton-min">
+              <label for="otros" class="left">
+                Escriba su objetivo de inversión:
+                <input type="text" class="input--mtOtherObj" value="" name="inversion" id="otros"
+                  placeholder="Opcional">
+                <div class="radio__indicator radio__indicator--small"></div>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="contButtons">
+      <button type="button" class="button button--back">Regresar</button>
+      <button type="button" class="button" id="validate" onclick="irA()">Continuar</button>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/objetivos.js"></script>
+  <script src="../js/effects.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

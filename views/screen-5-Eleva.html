@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Estilos por default RangeSlider.css -->
+  <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+  <title>Davivienda S.A.</title>
+</head>
+
+<body>
+  <!--Cambio 9
+    
+    Se elimina la propiedad style="padding: 0 10px;"
+  -->
+  <section class="container">
+    <a href="javascript:void(0)" class="backButton">
+      <span class="icon-dv-btnBack"></span>
+      Atrás
+    </a>
+
+    <!--Cambio 16 IMPORTANTE
+    
+      Se agregan clas clases contentBox--Bg-Fd y contentBox--fullWidth
+      Esto con el fin de cambiar el fondo del contenido y aumentar el tamaño de la caja contenedora
+      con el fin de ampliar el espacio y asi evitar que la informacion se vea muy junta.
+    -->
+    <div class="contentBox contentBox--Bg-Fd contentBox--fullWidth">
+      <div class="contentBoxInv">
+        <h2 class="regular line14 center noMrgn centerTitle">
+          Objetivo de su inversión:
+        </h2>
+        <h2 class="regular center noMrgn centerTitle">
+          <strong>$40.000.000 en 84 meses</strong>
+        </h2>
+        <hr class="barQuestion barQuestion--mt12">
+        <div class="rowFlex">
+
+          <!--Cambio 2
+            
+            Se eliminan las propiedades style="width: 25%;" contenidas en el div
+            se eliminan para tomar las propiedades de la clase respectiva
+          -->
+          <div class="col-3">
+
+            <!--Cambio 4
+            
+            Se elimina la etiqueta br contenida en medio del texto entre las palabras inversión inicial
+            -->
+            <h2 class="left line14 regular customerFlex">Inversión inicial: <br>
+              <strong>$500.000</strong></h2>
+          </div>
+          
+          <!--Cambio 1
+
+            Se eliminan las propiedades style="width: 50%; padding-left:13%;" contenidas en el div
+            se eliminan para tomar las propiedades de la clase respectiva
+          -->
+          <div class="col-3">
+            
+            <!--Cambio 5
+            
+            Se elimina la etiqueta br contenida en medio del texto entre las palabras Aporte mensual
+            -->
+
+            <h2 class="left line14 regular customerFlex">Aporte mensual: <br>
+              <strong>$500.000</strong></h2>
+          </div>
+
+           <!--Cambio 3
+            
+            Se eliminan las propiedades style="width: 25%;" contenidas en el div
+            se eliminan para tomar las propiedades de la clase respectiva
+          -->
+          <div class="col-3">
+
+            <!--Cambio 6
+            
+            Se elimina la etiqueta br contenida en medio del texto entre las palabras Riesgo de la inversión
+            -->
+            <h2 class="left line14 regular customerFlex">Riesgo de la inversión:<br>
+              <strong>Medio</strong></h2>
+          </div>
+        </div>
+      </div>
+      <h2 class="regular line16 mrgnTopBotton">Con esta información, el porcentaje alcanzado de su
+        objetivo en <strong>condiciones normales del mercado es:</strong>
+
+        <!--Cambio 10
+          Se elimina la propiedad style="position: relative;"
+        -->
+        <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--small">
+          <span class="icon-dv-tooltipInfo"></span>
+        </a>
+        <!--Cambio 17
+        
+          Se agrega la clase tooltip--moreTop 
+          Para mejorar la ubicación del tooltip
+        -->
+        <div class="tooltip tooltip--moreTop">
+          <p>
+            Comportamiento de los mercados que permiten una valorización de las inversiones acorde a lo esperado.
+          </p>
+        </div>
+      </h2>
+      <div class="contentBoxInv contentBoxInv--percentage">
+
+        <!--Cambio 18 
+        
+          Se agrega la clase icon-icon-range
+          Para ajustar el margin bottom del icono
+        -->
+        <img src="../images/house.svg" alt="" class="icon-icon-range">
+        <h2 class="regular line14 center noMrgn centerTitle title--mrgnBottom">Porcentaje del objetivo alcanzado: <br>
+          <strong> 87%</strong>
+        </h2>
+        <div class="input input--rangeSlider input--sliderGraphic">
+          <input name="weight" type="range" min="100" max="500" step="10" class="appearanceMediaSlider"
+            style="width: 96%; background: #CCCCCC;">
+          <div class="rangeSlider__quantityNumbers"><strong>0%</strong><strong>100%</strong></div>
+        </div>
+        <hr class="barQuestion mt9">
+        <div class="rowFlex">
+          <div class="col-12">
+            <h2 class="center line16 regular customerFlex--noMrgn">Monto alcanzado: <br>
+              <strong class="monto">$34.600.000</strong></h2>
+          </div>
+        </div>
+      </div>
+
+      <!--Cambio 8 ¡Este cambio fue consensuado en la reunion!
+      -->
+      <div class="graficaBarra" id="graficaBarra" style="display:none;">
+        <hr class="barQuestion barQuestion--barGrafica">
+        <!-- Camabio 8.1
+
+          Se agrega el h2 correspondiente al texto que suguiere al cliente hacer click sobre la grafica para ver los datos. 
+        -->
+        <h2 class="graficaBarra__text graficaBarra__text--header">
+          Haga clic en la línea de proyección para <strong>consultar el monto alcanzado en cada mes:</strong></h2>
+        <!--Cambio 8.3
+
+        Se agrega la clase graficaBarra__imagenGrafica
+        Para controlar el tamaño de la imagen en distintos dispositivos.
+        -->
+        <img class="graficaBarra__imagenGrafica" src="../images/grafica-sin-leyenda.png">
+        <!--Cambio 8.2 
+          
+          Se  Crean los contenedores graficaBarra__contLeyend, graficaBarra_contLyend--primary y secondary con el fin de agrupar y posicionar los elementos correspondientes 
+          a la leyenda de la grafica.
+        -->
+        <div class="graficaBarra__contLeyend">
+          <div class="graficaBarra__contLeyend graficaBarra__contLeyend--primary">
+            <h2 class="graficaBarra__text"><img src="../images/icono-rojo-leyend.svg" alt=""><br>
+              <strong>Monto alcanzado <br> de la inversión</strong></h2>
+          </div>
+          <div class="graficaBarra_contLeyend graficaBarra_contLeyend--secondary">
+            <h2 class="graficaBarra__text"><img src="../images/icon-estrella-grafica.svg" alt=""><br>
+              <strong>Objetivo<br> de la inversión</strong></h2>
+          </div>
+        </div>
+        <!--Aqui termina el cambio 8.2-->
+        <hr class="barQuestion barQuestion--barGraficaEnd">
+      </div>
+      <!--Aqui termina el cambio 8-->
+
+      <!-- Este es el boton de despliegue de la grafica-->
+
+      <div class="collapsedInv">
+        <a href="javascript:void(0)" class="optionCard__seeMore clicked optionCard__seeMore--grafButton-show"
+          id="seemore--secondCard" onclick="graficaBarraBoxShow()" style="display: block;"> <span
+            class="icon-dv-arrowDownBG icon customerIconsGraf"></span>
+          Ver gráfica de proyección</a>
+        <a href="javascript:void(0)" class="optionCard__seeMore clicked optionCard__seeMore--grafButton-hide"
+          id="seeless--secondCard" style="display: none;" onclick="graficaBarraBoxHide()"> <span
+            class="icon-dv-arrowDownBG icon icon--isToggle customerIconsGraf rotate180IconsGraf"></span>Ocultar gráfica
+          de proyección</a>
+      </div>
+    </div>
+    <div class="rowFlex">
+      <label class="footerSuggestion">Falta poco para alcanzar su objetivo <br><strong>Tenemos unas sugerencias para
+          llegar al 100%.</strong>
+      </label>
+    </div>
+
+
+    <!-- Fin Formularios -->
+    <!-- Contenedor y Botones genericos - Siempre poner los botones dentro de contButtons -->
+    <!-- Contenedor y Botones genericos -->
+    <div class="contButtons">
+      <button type="button" class="button button--secondary button--back">Regresar</button>
+      <button type="button" class="button button--noMargin button--primary" id="validacion" id="triggerCanguro"
+        onclick="showKangaroo()">Ver sugerencias</button>
+    </div>
+  </section>
+  <!--Cambio 7
+      
+      El canguro completo fue cambiado, ya que el anterior tenia un problema de alineamiento.
+  -->
+  <!--Canguro -->
+  <section class="contCanguroMain" id="contCanguro">
+    <div class="containerCanguro">
+      
+      <div class="containerCanguro__header">
+        <div class="header__title">
+          <img src="../images/sugerencias.svg" alt="icon">
+          <h2 class="noMrgn">Sugerencias</h2>
+        </div>
+        <a href="javascript:void(0)" class="header__closeCanguro" onclick="hideKangaroo()" title="Cerrar"><span
+            class="icon-dv-closeKangaroo"></span></a>
+      </div>
+      <hr class="barCarguro" style="margin-bottom: 2px;">
+      <div class="containerCanguro__content">
+        <h2 class="noMrgn textJustify" style="margin-bottom: 13px;">Lograr su objetivo de inversión pude ser posible.
+          Seleccione alguna de nuestras sugerencias:</h2>
+        <form id="formSugerencia" onclick="validarSugerencia()">
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el dinero que aportaría<strong> mensualmente a $410.000</strong>
+              <input type="radio" value="" name="sugerencias">
+
+              <!--Cambio 11
+
+                Se elimino la clase radio__indicator--top10"
+                Se modifica para alinear los check con cada item.
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el dinero <strong>inicial de inversión a
+                $4.700.000</strong>
+              <input type="radio" value="" name="sugerencias">
+              
+              <!--Cambio 12
+
+                Se elimino la clase radio__indicator--top10"
+                Se modifica para alinear los check con cada item.
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar la edad en que espera recibir su complemento de jubilación a <strong>40 años</strong>
+              <input type="radio" value="" name="sugerencias">
+
+              <!--Cambio 13
+
+                Se elimino la clase radio__indicator--top10"
+                Se modifica para alinear los check con cada item.
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+
+            <!--Cambio 19 
+            
+              Se elimina el br contenido en el texto Aumentar el nivel de riesgo de su inversión
+              ya que no es requerido en el diseño.
+            -->
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el nivel de <strong>riesgo de su inversión</strong>
+              <input type="radio" value="" name="sugerencias">
+
+              <!--Cambio 14
+
+                Se elimino la clase radio__indicator--top10"
+                Se modifica para alinear los check con cada item.
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <h2 class="noMrgn textJustify text--mbCanguro m-left" style="margin-bottom: 12px;">Modifique el monto de su
+            objetivo:</h2>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Disminuir su objetivo de inversión a
+              <strong> $34.600.000</strong>
+              <input type="radio" value="" name="sugerencias">
+
+              <!--Cambio 15
+
+                Se elimino la clase radio__indicator--top10"
+                Se modifica para alinear los check con cada item.
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="contButtons contButtons--sameWidth contButtons--mrgTop">
+            <button type="button" class="button button--secondary simular" id="triggerCanguroClose">Volver a
+              simular</button>
+            <button type="submit" class="button button--secondary aceptar" id="changeColor">Aceptar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!--Fin del canguro-->
+  <script src="../js/main.js"></script>
+  <script src="../js/inversion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Davivienda S.A.</title>
+</head>
+<body>
+  <section class="container">
+    <!-- Botón "atrás" Mobile -->
+    <a href="javascript:void(0)" class="backButton">
+      <span class="icon-dv-btnBack"></span>
+      Atrás
+    </a>
+    <!-- Fin Botón "atrás" Mobile -->
+    <!-- Formularios -->
+
+    <!--Cambio 1 IMPORTANTE
+          
+        Se agregan las clases contentBox--Bg-Fd y contentBox--fullWidth
+        Esto con el fin de cambiar el fondo del contenido y aumentar el tamaño de la caja contenedora
+        con el fin de ampliar el espacio y asi evitar que la informacion se vea muy junta.
+    -->
+    <div class="contentBox contentBox--Bg-Fd contentBox--fullWidth">
+      <!--Cambio 3
+      
+        Se modifica el texto contenido en la etiqueta <h2>
+      -->
+      <h2 class="regular noMrgnTop">Para alcanzar el 100% de su objetivo <strong>modifique los datos</strong>
+        de su inversión o  <strong>seleccione alguna de las sugerencias:</strong>
+    </h2>
+    <form action="" id="myForm">
+      <div class="rowFlex rowFlex--SpaceBetween">
+        <div class="col45">
+          <div class="input"><label for="ObjetivoInversion" class="label--Small12">Objetivo de la inversión:</label>
+          </div>
+        </div>
+          <!--Cambio 17 
+            Se Agregó la clase mrgnBtn
+          -->
+        <div class="col50 mrgnBtn">
+          <div class="input"><input type="number" id="ObjetivoInversion" value="" placeholder="Ingrese el valor"
+              class="input">
+            <a href="javascript:void(0)" title="Editar" class="input__buttonAction" id="triggerChangeAddress"><span
+                class="icon-dv-edit"></span></a>
+          </div> 
+        </div>
+          <!--Cambio 13 
+          
+            Se agrega la clase wrapper-error
+          -->
+        <div class="wrapper-error"><span class="error-input error-input--errorRight">Ingresar datos</span></div>
+      </div>
+      <div class="rowFlex rowFlex--SpaceBetween">
+        <div class="col45">
+          <div class="input"><label for="plazo" class="label--Small12">Plazo:</label></div>
+        </div>
+          <!--Cambio 18
+            Se Agregó la clase mrgnBtn
+          -->
+        <div class="col50 mrgnBtn">
+          <div class="input"><input type="number" id="plazo" value="" placeholder="Ingrese el valor" class="input">
+            
+            <a href="javascript:void(0)" title="Editar" class="input__buttonAction" id="triggerChangeAddress"><span
+                class="icon-dv-edit"></span></a>
+          </div>
+        </div>
+          <!--Cambio 14
+          
+            Se agrega la clase wrapper-error
+          -->
+        <div class="wrapper-error"><span class="error-input error-input--errorRight">El número de meses debe ser entre 12 y 600 meses
+        </span></div>
+      </div>
+      <div class="rowFlex rowFlex--SpaceBetween">
+        <div class="col45">
+          <div class="input"><label for="InversionInicial" class="label--Small12">Inversión inicial:</label></div>
+        </div>
+          <!--Cambio 19 
+            Se Agregó la clase mrgnBtn
+          -->
+        <div class="col50 mrgnBtn">
+          <div class="input"><input type="number" id="InversionInicial" value="" placeholder="Ingrese el valor"
+              class="input">
+            <a href="javascript:void(0)" title="Editar" class="input__buttonAction" id="triggerChangeAddress"><span
+                class="icon-dv-edit"></span></a>
+          </div>
+        </div>
+
+          <!--Cambio 15
+          
+            Se agrega la clase wrapper-error
+          -->
+        <div class="wrapper-error"><span class="error-input error-input--errorRight">El valor mínimo debe ser $10.000</span></div>
+      </div>
+      <div class="rowFlex rowFlex--SpaceBetween">
+        <div class="col45">
+          <div class="input"><label for="AporteMensual" class="label--Small12">Aporte mensual:</label></div>
+        </div>
+          <!--Cambio 21
+            Se Agregó la clase mrgnBtn
+          -->
+        <div class="col50 mrgnBtn">
+          <div class="input"><input type="number" id="AporteMensual" value="" placeholder="Ingrese el valor"
+              class="input">
+            <a href="javascript:void(0)" title="Editar" class="input__buttonAction" id="triggerChangeAddress"><span
+                class="icon-dv-edit"></span></a>
+          </div>
+        </div>
+          <!--Cambio 16
+          
+            Se agrega la clase wrapper-error
+          -->
+        <div class="wrapper-error"><span class="error-input error-input--errorRight error-input--last">El valor mínimo debe ser $10.000</span></div>
+      </div>
+      <!-- end risk -->
+    </form>
+      <!-- start risk -->
+      <div id="rangeRisk">
+        <hr class="barQuestion barQuestion--Aportes">
+        <div class="rowFlex rowFlex--SpaceBetween">
+          <div class="col45">
+            <div class="input"><label for="nivelRiesgo:" class="label--Small12">Nivel de riesgo:</label>
+            </div>
+          </div>
+          <div class="col50 noMrgnBtn">
+            <div class="input"><select name="nivelRiesgo" id="nivelRiesgo">
+                <option value="1">Bajo</option>
+                <option value="2">Medio</option>
+                <option value="3">Alto</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <h2 class="regular mrgnTopBotton">Con esta información, el porcentaje alcanzado de su
+          objetivo en <strong>condiciones normales del mercado es:</strong>
+          <!--Cambio 10
+            Se elimina la propiedad style="position: relative;"
+            Se elimina el estilo ya que este se encuentra contenido en la clase
+          -->
+          <a href="javascript:void(0)" class="buttonTooltip buttonTooltip--small">
+            <span class="icon-dv-tooltipInfo"></span>
+          </a>
+          <div class="tooltip">
+            <p>
+              Comportamiento de los mercados que permiten una valorización de las inversiones acorde a
+              lo esperado.
+            </p>
+          </div>
+        </h2>
+        <div class="contentBoxInv contentBoxInv--percentage">
+          <!--Cambio 4
+            Se agrega la clase icon-icon-range 
+            Para agregar margin buttom a la imagen
+          -->
+          <img src="../images/house.svg" alt="" class="icon-icon-range">
+          <h2 class="regular center noMrgn centerTitle title--mrgnBottom">Porcentaje del objetivo
+            alcanzado: <br>
+            <strong>64%</strong>
+          </h2>
+          <div class="input input--rangeSlider input--sliderGraphic input--sliderGraphic--middle">
+            <input name="weight" type="range" min="100" max="500" step="10" class="appearanceMediaSlider" style="width: 96%;">
+            <div class="rangeSlider__quantityNumbers"><strong>0%</strong><strong>100%</strong></div>
+            <div class="rangeslider__value-bubble rangeslider__value-bubble--d-none"></div>
+          </div>
+          <hr class="barQuestion mt9">
+          <div class="rowFlex">
+            <div class="col-12">
+              <h2 class="center regular customerFlex">Monto alcanzado: <br>
+                <strong class="monto">$26.400.000</strong></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Fin Formularios -->
+
+    <label id="rangeRiskFooter" class="footerAportes paddingLateral20">Con esta proyección usted <strong>logrará el 100% de su
+      objetivo en condiciones normales del mercado:</strong>
+    </label>
+
+    <!-- Contenedor y Botones genericos - Siempre poner los botones dentro de contButtons -->
+    <!--Cambio 12 
+        Se elimina la propiedad style="margin-top:4px y se reemplaza por la clase contButtons--noMrgnBtn
+        para tomar los estilos contenidos en la clase.
+    -->
+    <div class="contButtons contButtons--sameWidth contButtons--noMrgnBtn">
+      <button type="button" class="button button--secondary button--marginBoton15" onclick="showKangaroo()">Ver sugerencias</button>
+      <button type="button" class="button widthBtnQuestion button--secondary button--marginBoton15" id="modificar" onclick="getRangeRiskModify()">Modificar datos</button>
+      <button type="submit" class="button  button--secondary button--marginBoton15" id="validar" onclick="getRangeRiskTwo()" disabled>Volver a Simular</button>
+    </div>
+    <!-- Contenedor y Botones genericos -->
+  </section>
+
+  <!--Canguro -->
+  <section class="contCanguroMain" id="contCanguro">
+    <!--Cambio 2
+      Se elimina la propiedad style="padding-top: 4px;
+    -->
+    <div class="containerCanguro">
+
+      <div class="containerCanguro__header">
+        <div class="header__title">
+          <img src="../images/sugerencias.svg" alt="icon">
+          <h2 class="noMrgn">Sugerencias</h2>
+        </div>
+        <a href="javascript:void(0)" class="header__closeCanguro" onclick="hideKangaroo()" title="Cerrar"><span
+            class="icon-dv-closeKangaroo"></span></a>
+      </div>
+      <hr class="barCarguro" style="margin-bottom: 2px;">
+      <div class="containerCanguro__content">
+        <!--Cambio 20
+        Se corrige la palabra bude por puede.
+      -->
+        <h2 class="noMrgn textJustify" style="margin-bottom: 13px;">Lograr su objetivo de inversión puede ser posible.
+          Seleccione alguna de nuestras sugerencias:</h2>
+        <form id="formSugerencia" onclick="validarSugerencia()">
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el dinero que aportaría<strong> mensualmente a $410.000</strong>
+              <input type="radio" value="" name="sugerencias">
+              <!--Cambio 5
+                Se elimina la clase radio__indicator--top10
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el dinero <strong>inicial de inversión a
+                $4.700.000</strong>
+              <input type="radio" value="" name="sugerencias">
+              <!--Cambio 6
+                Se elimina la clase radio__indicator--top10
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el tiempo de su inversión <strong> a 96
+                meses</strong>
+              <input type="radio" value="" name="sugerencias">
+              <!--Cambio 7
+                Se elimina la clase radio__indicator--top10
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Aumentar el nivel de <strong>riesgo de su <br>
+                inversión</strong>
+              <input type="radio" value="" name="sugerencias">
+              <!--Cambio 8
+                Se elimina la clase radio__indicator--top10
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <h2 class="noMrgn textJustify text--mbCanguro m-left" style="margin-bottom: 12px;">Modifique el monto de su
+            objetivo:</h2>
+          <div class="input contentQuestion" style="margin-bottom: 0;">
+            <label class="radio plRadio smallText radio--mbCanguro">
+              Disminuir su objetivo de inversión a
+              <strong> $34.600.000</strong>
+              <input type="radio" value="" name="sugerencias">
+              <!--Cambio 9
+                Se elimina la clase radio__indicator--top10
+              -->
+              <div class="radio__indicator radio__indicator--small"></div>
+            </label>
+          </div>
+          <div class="contButtons contButtons--sameWidth contButtons--mrgTop">
+            <button type="button" class="button button--secondary simular"
+              id="triggerCanguroClose">Volver a simular</button>
+            <button type="submit" class="button button--secondary aceptar" id="changeColor">Aceptar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/inversion.js"></script>
+  <script>
+    $('input[type="range"]').rangeslider({
+      polyfill: false,
+      onInit: function () {
+        this.$range.append($(valueBubble));
+        updateValueBubble(null, null, this);
+      },
+      onSlide: function (pos, value) {
+        updateValueBubble(pos, value, this);
+      }
+    });
+  </script>
+</body>
+
+</html>

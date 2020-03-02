@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Estilos por default RangeSlider.css -->
+    <link rel="stylesheet" href="../css/utils/rangeSlider/rangeslider.min.css">
+    <title>Davivienda S.A.</title>
+</head>
+
+<body>
+    <section class="container">
+        <!-- Botón "atrás" Mobile -->
+        <div class="dataVivienda">
+            <div class="bgImage"></div>
+            <div class="column">
+                <h2 class="titleInversion">Cristian David,</h2>
+
+                <!--Cambio 1
+
+                    Se agrego la siguiente clase - class="parrInversion parrInversion--lineHeight"
+                    Se agregó para modificar el interlineado del texto correspondiente.
+                -->
+
+                <p class="parrInversion parrInversion--lineHeight">Según sus respuestas de la encuesta, su perfil de cliente es:</p>
+            </div>
+            <div class="column">
+                <h2 class="titleInversionMod">Moderado</h2>
+                <!--Cambio 2
+
+                    Se elimino la etiqueta Strong contenida en el <p class="parrafoInversion">
+                    Se elimino ya que no estaba contemplado en el diseño.
+                -->
+                <p class="parrInversion">
+                    Usted es un inversionista que se siente cómodo buscando mejorar su rentabilidad, asumiendo para ello
+                    un nivel de riesgo medio, pero también es consciente de que por los riesgos que asume, en algunos
+                    momentos se pueden presentar pérdidas en parte de su capital
+                </p>
+            </div>
+        </div>
+        <div class="contTextInformation mrgnTopMore">
+            <p><strong class="medium">Si desea actualizar su perfil, <br>
+                    realice nuevamente la encuesta.</strong>
+            </p>
+        </div>
+        <div class="contButtons contButtons--sameWidth">
+            <!-- <button type="button" class="button button--secondary button--back">Regresar</button> -->
+            <button type="button" class="button button--secondary" id="next">Hacer encuesta</button>
+            <button type="button" class="button button--primary" id="next">Continuar</button>
+        </div>
+    </section>
+    <!-- <script src="../js/jquery.min.js"></script>
+    <script src="../js/rangeslider.min.js"></script>
+    <script src="../js/main.js"></script> -->
+    <script src="../js/encuestas.js"></script>
+
+</body>
+
+</html>
